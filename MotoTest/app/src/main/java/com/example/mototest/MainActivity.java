@@ -1,8 +1,13 @@
 package com.example.mototest;
 
+import android.app.Activity;
 import android.app.Dialog;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.graphics.Color;
+import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
@@ -13,6 +18,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.mototest.Api.InfoAcc;
+import com.example.mototest.Model.MyReceiver;
 import com.example.mototest.Model.Question;
 import com.example.mototest.View.Login;
 import com.google.android.material.snackbar.Snackbar;
@@ -40,12 +46,17 @@ public class MainActivity extends AppCompatActivity {
     private View view;
     protected Question question;
     public int check=0;
+    private Activity activity = this;
+    private MyReceiver mNetworkReceiver;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 //        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
 
-
+        IntentFilter filter = new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION);
+        filter.addAction(Intent.ACTION_AIRPLANE_MODE_CHANGED);
+        mNetworkReceiver = new MyReceiver();
+        this.registerReceiver(mNetworkReceiver, filter);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
@@ -139,5 +150,45 @@ public class MainActivity extends AppCompatActivity {
             });
             dialog.show();
     }
+
+//    private final MyReceiver mNetworkReceiver2 = new MyReceiver(){
+//
+//        @Override
+//        public void onReceive(Context context, Intent intent) {
+//            ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+//            if (cm.getActiveNetworkInfo() == null) {
+//                Dialog dialog=new Dialog(activity);
+////        View view  = getActivity().getLayoutInflater().inflate(R.layout.dialog_custom, null);
+//                dialog.setContentView(R.layout.dialog_custom);
+//
+//                Button btn_yes=(Button)dialog.findViewById(R.id.btn_yes);
+//                Button btn_no=(Button)dialog.findViewById(R.id.btn_no);
+//                TextView tv_dialog_title= dialog.findViewById(R.id.tv_dialog_title);
+//                TextView tv_dialog_content=dialog.findViewById(R.id.tv_dialog_content);
+//                tv_dialog_title.setText("Xác nhận chuyển hướng");
+//                tv_dialog_content.setText("Bạn đã mất kết nối mạng, chuyển qua chế độ offline?");
+//                btn_yes.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+////                        dialog.dismiss();
+////                        finish();
+////                        Intent intent=new Intent(MainActivity.this, Login.class);
+////                        startActivity(intent);
+//                        Toast.makeText(context, "Internet Connected 2", Toast.LENGTH_LONG).show();
+//                    }
+//                });
+//                btn_no.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        dialog.dismiss();
+//                    }
+//                });
+//                dialog.show();
+//
+//            } else if (cm.getActiveNetworkInfo() != null) {
+//                Toast.makeText(context, "Internet Connected 2", Toast.LENGTH_LONG).show();
+//            }
+//        }
+//    };
 
 }

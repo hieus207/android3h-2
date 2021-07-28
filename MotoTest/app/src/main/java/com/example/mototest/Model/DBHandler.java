@@ -149,7 +149,7 @@ public class DBHandler extends SQLiteOpenHelper {
 
     public ArrayList<Test> getAllTest() {
         ArrayList<Test> testList = new ArrayList<Test>();
-        String selectQuery = "SELECT  * FROM " + TABLE_TESTS;
+        String selectQuery = "SELECT DISTINCT "+KEY_IDTEST+" FROM " + TABLE_TESTS;
 
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);
@@ -159,7 +159,7 @@ public class DBHandler extends SQLiteOpenHelper {
                 Test test = new Test();
                 test.setIdtest(Integer.parseInt(cursor.getString(0)));
 //               test.setListquestion(cursor.getString(1)); cái này là arraylist t chưa lấy đc
-                test.setTime(cursor.getString(2));
+//                test.setTime(cursor.getString(2));
                 testList.add(test);
                 Log.e("adadad",test.toString());
             } while (cursor.moveToNext());
