@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_rowques"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/backgroundColor"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context="com.example.mototest.View.Admin.rowquestion">
+
+
+        <TextView
+            android:id="@+id/tv_IdQues"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ID"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"/>
+
+
+
+    <TextView
+        android:id="@+id/tv_questionform"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="loai cau hoi"
+        android:textSize="16sp"
+        android:gravity="left"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/tv_qscontent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:text="TextView"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"/>
+
+    <ImageView
+        android:id="@+id/imgtv_question"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_da1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:text="TextView"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/tv_da2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:text="TextView"
+        android:textSize="16sp"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/tv_da3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:text="TextView"
+        android:textSize="16sp"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/tv_da4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:text="TextView"
+        android:textSize="16sp"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/tv_dadung"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:text="TextView"
+        android:textSize="16sp"
+        android:textStyle="bold|italic"
+        android:textColor="@android:color/black" />
+</LinearLayout>

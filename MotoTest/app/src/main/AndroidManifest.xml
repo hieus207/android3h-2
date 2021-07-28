@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.mototest">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".Api.InfoAcc"
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/icon"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MotoTest">
+        <activity android:name=".View.Comment.comment" />
+        <activity android:name=".View.ForgetPass" />
+        <activity android:name=".View.Test.Result" />
+        <activity android:name=".View.Register" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".View.Test.LayoutTest" />
+        <activity
+            android:name=".View.Login"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.MotoTest.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

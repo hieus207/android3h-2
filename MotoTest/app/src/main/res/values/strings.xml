@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Thi Bằng Lái Xe Máy</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_test">Thi Theo Đề</string>
+    <string name="menu_review">Ôn Tập Lý Thuyết</string>
+    <string name="menu_testrandom">Thi Ngẫu Nhiên</string>
+    <string name="menu_tip">Mẹo Thi</string>
+    <string name="menu_changepass">Đổi Mật Khẩu</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

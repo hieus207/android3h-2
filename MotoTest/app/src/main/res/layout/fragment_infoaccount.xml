@@ -1,0 +1,162 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context="com.example.mototest.View.Admin.infoaccount">
+
+    <TextView
+        android:id="@+id/tv_iduser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:text="ID" />
+
+    <TextView
+        android:id="@+id/tv_username"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:text="Username" />
+
+<!--    <EditText-->
+<!--        android:id="@+id/edt_username"-->
+<!--        android:layout_width="fill_parent"-->
+<!--        android:layout_height="wrap_content" />-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edt_usernamelayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        app:startIconDrawable="@drawable/ic_user">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_username"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="text"
+            android:maxLines="1" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_Recover"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:text="Mã khôi phục" />
+
+<!--    <EditText-->
+<!--        android:id="@+id/edt_recoverCode"-->
+<!--        android:layout_width="fill_parent"-->
+<!--        android:layout_height="wrap_content" />-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edt_codelayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        app:startIconDrawable="@drawable/ic_code"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_recoverCode"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="text"
+            android:maxLines="1" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:text="Tên" />
+
+<!--    <EditText-->
+<!--        android:id="@+id/edt_name"-->
+<!--        android:layout_width="fill_parent"-->
+<!--        android:layout_height="wrap_content" />-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edt_namelayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        app:startIconDrawable="@drawable/ic_rename">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="text"
+            android:maxLines="1" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_permission"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:text="Quyền" />
+
+    <RadioGroup
+        android:id="@+id/rbtn_permission"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/rbtn_admin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Admin" />
+
+        <RadioButton
+            android:id="@+id/rbtn_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="User" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/ll_edit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_active"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:text="Block" />
+
+        <Button
+            android:id="@+id/btn_update"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:text="Cập nhật" />
+
+        <Button
+            android:id="@+id/btn_delete"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:text="Xoá" />
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

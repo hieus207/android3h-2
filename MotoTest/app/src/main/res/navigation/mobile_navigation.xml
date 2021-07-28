@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_test">
+
+    <fragment
+        android:id="@+id/nav_test"
+        android:name="com.example.mototest.View.Test.TestFragment"
+        android:label="@string/menu_test"
+        tools:layout="@layout/fragment_test" />
+    <fragment
+        android:id="@+id/nav_test_random"
+        android:name="com.example.mototest.View.TestRanDom.TestRanDomFragment"
+        android:label="@string/menu_testrandom"
+        tools:layout="@layout/fragment_testrandom" />
+
+    <fragment
+        android:id="@+id/nav_review"
+        android:name="com.example.mototest.View.Review.ReviewFragment"
+        android:label="@string/menu_review"
+        tools:layout="@layout/fragment_review" />
+
+    <fragment
+        android:id="@+id/nav_tip"
+        android:name="com.example.mototest.View.Tip.TipFragment"
+        android:label="@string/menu_tip"
+        tools:layout="@layout/fragment_tip" />
+    <fragment
+        android:id="@+id/nav_change_pass"
+        android:name="com.example.mototest.View.ChangePass.ChangepassFragment"
+        android:label="Đổi Mật Khẩu"
+        tools:layout="@layout/fragment_changepass"/>
+
+    <fragment
+        android:id="@+id/nav_dashboard"
+        android:label="Dashboard"
+        android:name="com.example.mototest.View.Admin.DashboardFragment"
+        tools:layout="@layout/fragment_dashboard">
+
+        <action
+            android:id="@+id/action_nav_dashboard_to_accountmanager"
+            app:destination="@id/accountmanager" />
+
+        <action
+            android:id="@+id/action_nav_dashboard_to_testmanager"
+            app:destination="@id/testmanager" />
+        <action
+            android:id="@+id/action_nav_dashboard_to_questionmanager"
+            app:destination="@id/questionmanager" />
+    </fragment>
+    <fragment
+        android:id="@+id/rowquestion"
+        android:name="com.example.mototest.View.Admin.rowquestion"
+        android:label="rowquestion" />
+    <fragment
+        android:id="@+id/accountmanager"
+        android:name="com.example.mototest.View.Admin.usermanager"
+        android:label="Quản lý tài khoản"
+        tools:layout="@layout/fragment_usermanager" >
+
+        <action
+            android:id="@+id/action_accountmanager_to_infoaccount"
+            app:destination="@id/infoaccount" />
+    </fragment>
+    <fragment
+        android:id="@+id/infoaccount"
+        android:name="com.example.mototest.View.Admin.infoaccount"
+        android:label="Thông tin tài khoản"
+        tools:layout="@layout/fragment_infoaccount" >
+        <argument
+            android:name="User"
+            app:argType="com.example.mototest.Model.User" />
+    </fragment>
+    <fragment
+        android:id="@+id/infotest"
+        android:name="com.example.mototest.View.Admin.infotest"
+        android:label="Thông tin người dùng"
+        tools:layout="@layout/fragment_infotest" />
+    <fragment
+        android:id="@+id/questionmanager"
+        android:name="com.example.mototest.View.Admin.questionmanager"
+        android:label="Quản lý câu hỏi"
+        tools:layout="@layout/fragment_questionmanager" >
+
+        <action
+            android:id="@+id/action_questionmanager_to_infoquestion"
+            app:destination="@id/infoquestion" />
+        <argument
+            android:name="TestID"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/rowaccount"
+        android:name="com.example.mototest.View.Admin.rowaccount"
+        android:label="fragment_rowaccount"
+        tools:layout="@layout/fragment_rowaccount" />
+    <fragment
+        android:id="@+id/rowtest"
+        android:name="com.example.mototest.View.Admin.rowtest"
+        android:label="fragment_rowtest"
+        tools:layout="@layout/fragment_rowtest" />
+    <navigation android:id="@+id/navigation" />
+    <fragment
+        android:id="@+id/testmanager"
+        android:name="com.example.mototest.View.Admin.testmanager"
+        android:label="Quản lý bài thi"
+        tools:layout="@layout/fragment_testmanager" >
+
+        <action
+            android:id="@+id/action_testmanager_to_infotest"
+            app:destination="@id/infotest" />
+        <action
+            android:id="@+id/action_testmanager_to_questionmanager"
+            app:destination="@id/questionmanager" />
+    </fragment>
+    <fragment
+        android:id="@+id/infoquestion"
+        android:name="com.example.mototest.View.Admin.infoquestion"
+        android:label="Thông tin câu hỏi"
+        tools:layout="@layout/fragment_infoquestion" >
+        <argument
+            android:name="Ques"
+            app:argType="com.example.mototest.Model.Question" />
+    </fragment>
+
+
+</navigation>

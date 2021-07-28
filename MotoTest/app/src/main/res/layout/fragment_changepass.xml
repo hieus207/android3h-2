@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_changepass"
+    tools:context=".View.ChangePass.ChangepassFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/tv_changepass"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="80dp"
+        android:gravity="center"
+        android:text="@string/menu_changepass"
+        android:textSize="40sp"
+        android:textColor="@color/black"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:id="@+id/edt_passwordlayoutchange1"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        app:startIconDrawable="@drawable/ic_lock"
+        app:endIconMode="password_toggle"
+        android:layout_alignParentLeft="false"
+        android:layout_below="@+id/tv_changepass"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="100dp"
+        android:hint="Nhập mật khẩu cũ"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_changepass_current"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:maxLines="1"
+            android:inputType="textPassword"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:id="@+id/edt_passwordlayoutchange"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        app:startIconDrawable="@drawable/ic_lock"
+        app:endIconMode="password_toggle"
+        android:layout_alignParentLeft="false"
+        android:layout_below="@+id/edt_passwordlayoutchange1"
+        android:layout_centerInParent="true"
+        android:hint="Nhập mật khẩu mới"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_changepass_new"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:maxLines="1"
+            android:inputType="textPassword"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:id="@+id/edt_Comfirmpasswordlayoutchange"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        app:startIconDrawable="@drawable/ic_lock"
+        app:endIconMode="password_toggle"
+        android:layout_alignParentLeft="false"
+        android:layout_below="@+id/edt_passwordlayoutchange"
+        android:layout_centerInParent="true"
+        android:hint="Nhập lại mật khẩu"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_changepass_confnew"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:maxLines="1"
+            android:inputType="textPassword"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_save"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edt_Comfirmpasswordlayoutchange"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/orange"
+        android:gravity="center"
+        android:text="Lưu"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:cornerRadius="10dp"/>
+
+
+
+</RelativeLayout>

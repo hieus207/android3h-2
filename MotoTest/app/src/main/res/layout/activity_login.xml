@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <View
+        android:id="@+id/v_iconapp"
+        android:layout_width="115dp"
+        android:layout_height="115dp"
+        android:layout_marginTop="40dp"
+        android:layout_centerInParent="true"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/test" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edt_usernamelayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/v_iconapp"
+        android:layout_alignParentLeft="false"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:hint="Tên đăng nhập"
+        app:startIconDrawable="@drawable/ic_user">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_usn_login"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="text"
+            android:maxLines="1" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:id="@+id/edt_passwordlayout"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        app:startIconDrawable="@drawable/ic_lock"
+        app:endIconMode="password_toggle"
+        android:layout_alignParentLeft="false"
+        android:layout_below="@+id/edt_usernamelayout"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:hint="Mật khẩu"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_pass_login"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:maxLines="1"
+            android:inputType="textPassword"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_forgetpass"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:text="Quên Mật Khẩu ?"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/edt_passwordlayout"
+        android:layout_alignParentLeft="false"
+        android:layout_marginTop="15dp"
+        android:textSize="20sp"
+        android:textColor="@color/blue"
+        android:gravity="end"
+        android:textStyle="bold"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_login"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_forgetpass"
+        android:layout_alignParentLeft="false"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="@color/blue"
+        android:gravity="center"
+        android:text="Đăng nhập"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        app:cornerRadius="100dp" />
+
+    <TextView
+        android:id="@+id/tv_register"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:text="Bạn chưa có tài khoản ? Đăng kí ngay"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/btn_login"
+        android:layout_alignParentLeft="false"
+        android:layout_marginTop="15dp"
+        android:textSize="20sp"
+        android:textColor="@color/blue_2"
+        android:gravity="center"
+        android:textStyle="bold"
+        />
+
+
+
+</RelativeLayout>

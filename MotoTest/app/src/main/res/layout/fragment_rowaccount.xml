@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/backgroundColor"
+    android:padding="10dp">
+    tools:context=".rowaccount">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:text="username"
+            android:textStyle="bold"
+            android:gravity="left"/>
+        <TextView
+            android:id="@+id/tv_Recover"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:text="recover"
+            android:gravity="left"/>
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:text="name"
+            android:gravity="left"/>
+        <TextView
+            android:id="@+id/tv_permission"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:text="admin"
+            android:gravity="left"
+            tools:ignore="DuplicateIds" />
+
+
+</LinearLayout>

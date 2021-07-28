@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_da"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/customborder"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tv_ansernum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Câu 1: " />
+
+    <TextView
+        android:id="@+id/tv_anser_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="A"
+        android:textColor="#A442BF" />
+
+
+</LinearLayout>

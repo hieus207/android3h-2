@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <View
+        android:id="@+id/v_adduser"
+        android:layout_width="115dp"
+        android:layout_height="115dp"
+        android:layout_marginTop="15dp"
+        android:layout_centerInParent="true"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/ic_useradd"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edt_namelayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/v_adduser"
+        android:layout_alignParentLeft="false"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:hint="Nhập Tên"
+        app:startIconDrawable="@drawable/ic_rename"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_res_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:maxLines="1"
+            android:inputType="text"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edt_usernamelayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edt_namelayout"
+        android:layout_alignParentLeft="false"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:hint="Nhập tên đăng nhập"
+        app:startIconDrawable="@drawable/ic_user"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_res_username"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:maxLines="1"
+            android:inputType="text"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edt_passwordlayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edt_usernamelayout"
+        android:layout_alignParentLeft="false"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:hint="Nhập mật khẩu"
+        app:startIconDrawable="@drawable/ic_lock"
+        app:endIconMode="password_toggle"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_res_password"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:maxLines="1"
+            android:inputType="textPassword"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edt_ComfirmPasslayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edt_passwordlayout"
+        android:layout_alignParentLeft="false"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:hint="Nhập lại mật khẩu"
+        app:startIconDrawable="@drawable/ic_lock"
+        app:endIconMode="password_toggle"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_res_ComPassword"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:maxLines="1"
+            android:inputType="textPassword"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_res_register"
+        android:layout_gravity="center"
+        android:layout_width="310dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/edt_ComfirmPasslayout"
+        android:text="Đăng Ký"
+        android:layout_alignParentLeft="false"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:cornerRadius="15dp"
+        android:backgroundTint="@color/blue_2"
+        app:icon="@drawable/ic_useradd"/>
+    <TextView
+        android:id="@+id/tv_login"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:text="Bạn đã có tài khoản ? Đăng nhập ngay"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/btn_res_register"
+        android:layout_alignParentLeft="false"
+        android:layout_marginTop="15dp"
+        android:textSize="20sp"
+        android:textColor="@color/blue_2"
+        android:gravity="center"
+        android:textStyle="bold"
+        />
+
+
+</RelativeLayout>
